@@ -1,0 +1,240 @@
+*{
+  margin:0;
+  padding: 0;
+  text-align: center;
+ background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(yellow-bokeh-photo-949587.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+ul {
+  background:transparent;
+  list-style: none;
+  float: right;
+  margin-top: 70px;
+  transition: all 4s ease-in-out;
+}
+
+ul li{
+  display: inline-block;
+  background: transparent;
+}
+
+ul li a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 5px 20px;
+  transition: 0.3s ease;
+  background: transparent;
+}
+
+ul li a:hover {
+  color: mediumseagreen;
+}
+
+ul li.active a{
+  color: mediumseagreen;
+}
+
+.logo img {
+  background:transparent;
+  float: left;
+  width: 200px;
+  height: 150px;
+  transition: all 4s ease-in-out;
+}
+
+.main {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: white;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: white;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color:white; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: white; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: white; 
+}
+
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+
+} 
+
+/* style inputs and link buttons */
+input,.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+  background-image: none;
+  
+}
+
+input:hover,.btn:hover {
+  opacity: 1;
+}
+
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col1 {
+  float: left;
+  width: 50%;
+
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+
+h2.login-title {
+    width: 100%;
+}
+form.login-form{
+    display: grid;
+}
+.col2 {
+    float: right;
+    margin: auto;
+    display: inline-grid;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position:relative;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
